@@ -1,0 +1,10 @@
+{
+  "branch": "12factor",
+  "containers": {
+    "vm1": {
+      "processes": [ "ping" ],
+      "run_list": [ "role[dfw2-basic]" ],
+      "flavor": "m1.tiny"
+    }
+  }
+}
