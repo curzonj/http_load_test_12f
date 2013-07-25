@@ -8,7 +8,6 @@ GEM
     kgio (2.8.0)
     rack (1.4.5)
     raindrops (0.11.0)
-    rake (10.1.0)
     thor (0.18.1)
     unicorn (4.6.3)
       kgio (~> 2.6)
@@ -20,5 +19,4 @@ PLATFORMS
 
 DEPENDENCIES
   foreman
-  rake
   unicorn
