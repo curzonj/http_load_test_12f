@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+set -x
+
+rm -rf tmp/build
+mkdir -p tmp/build
+git archive HEAD | tar -C tmp/build -xf -
+
+mkdir -p tmp/build/vendor
+
+cd tmp/build
+bundle --deployment --without development test
