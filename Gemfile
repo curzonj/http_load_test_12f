@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'foreman'
 gem 'unicorn'
+
+group :development do
+  gem 'rake'
+  gem 'foreman'
+end

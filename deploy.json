@@ -2,8 +2,8 @@
   "branch": "12factor",
   "containers": {
     "vm1": {
-      "processes": [ "ping" ],
-      "run_list": [ "role[dfw2-basic]" ],
+      "processes": [ "web" ],
+      "run_list": [ "recipe[12factor_app]" ],
       "flavor": "m1.tiny"
     }
   }
