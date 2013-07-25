@@ -3,11 +3,17 @@
 set -e
 set -x
 
-rm -rf tmp/build
-mkdir -p tmp/build
-git archive HEAD | tar -C tmp/build -xf -
+BUILD_DIR=$1
 
-mkdir -p tmp/build/vendor
+if [ -z $BUILD_DIR]; then
+  BUILD_DIR=tmp/build
+fi
 
-cd tmp/build
+rm -rf $BUILD_DIR
+mkdir -p $BUILD_DIR
+git archive HEAD | tar -C $BUILD_DIR -xf -
+
+mkdir -p $BUILD_DIR/vendor
+
+cd $BUILD_DIR
 bundle --deployment --without development test
