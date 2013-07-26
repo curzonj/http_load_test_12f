@@ -1,6 +1,6 @@
 {
   "containers": {
-    "vm1": {
+    "web": {
       "processes": [ "web" ],
       "run_list": [ "recipe[12factor_app]" ],
       "flavor": "m1.tiny"
