@@ -2,7 +2,7 @@
   "containers": {
     "web": {
       "processes": [ "web" ],
-      "run_list": [ "recipe[12factor_app]" ],
+      "run_list": [ "role[12factor_app]" ],
       "flavor": "m1.tiny"
     }
   }
