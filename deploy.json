@@ -1,9 +1,14 @@
 {
   "containers": {
+    "lb": {
+      "run_list": [ "recipe[12factor_haproxy]" ],
+      "connect_services": {
+        "haproxy_backend": "web"
+      }
+    },
     "web": {
-      "processes": [ "web" ],
-      "run_list": [ "role[12factor_app]" ],
-      "flavor": "m1.tiny"
+      "run_list": [ "recipe[12factor_app]" ],
+      "processes": [ "web" ]
     }
   }
 }
